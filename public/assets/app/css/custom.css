@@ -1,0 +1,235 @@
+p.big {
+    font-size: 19px;
+    font-weight: 500;
+    color: gray;
+  }
+
+  .outer {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    align-items: center;
+    height: fit-content;
+    background-color: transparent;
+    font-size: 1.8rem;
+    font-family: Verdana, sans-serif;
+    font-weight: 100;
+
+
+  }
+
+  .grad {
+    text-transform: uppercase;
+    margin: 0 auto;
+    background-image: linear-gradient(90deg, #FF7304, #26a204) !important;
+    background-clip: text !important;
+    -moz-background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+  }
+
+  .slider_section .carousel-indicators li {
+    border-radius: 50%;
+    animation: all 0.5s;
+  }
+
+  .slider_section .carousel-indicators li.active {
+    background-color: #26a204;
+  }
+
+  .slider-detail h2 {
+    margin-top: 5rem !important;
+  }
+
+  .bottom {
+    display: block;
+    max-height: 100px;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    height: 0px;
+    animation: all 0.5s;
+    color: rgb(93, 89, 89);
+    background: white;
+    width: 100%;
+  }
+
+  .bottom h3 {
+    font-size: 19px;
+  }
+
+  .bottom a {
+    height: 19px;
+    width: 19px;
+    background: gray;
+    color: white;
+    border-radius: 50%;
+  }
+
+  .bottom i {
+    color: white;
+    font-weight: bold;
+  }
+
+  .service_img-box:hover>.bottom {
+    height: 100px;
+  }
+
+  .events .card {
+    transition: all 0.5s;
+    padding: 0.5rem;
+  }
+
+  .events .card:hover {
+    transform: scale(1.05);
+  }
+
+  a.nav-link {
+    transition: all 0.5s;
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 1rem;
+  }
+
+  footer i {
+    font-size: 21px !important;
+  }
+
+  @media(max-width:786px) {
+    .events .card h4 {
+      text-align: center;
+    }
+
+    .flip-card__container {
+      width: 87% !important;
+    }
+  }
+
+  #leadership {
+    position: relative;
+  }
+
+  .child {
+    background-color: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #F9B428;
+    list-style-type: none;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    display: none;
+    overflow: hidden;
+
+  }
+
+  .child a {
+    color: #F9B428 !important;
+    font-size: 17px;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+
+  }
+
+  .child li {
+    text-align: center;
+    padding: 0.2rem 0.8rem;
+  }
+
+  .child li:hover {
+    background: #f4f4f4;
+
+  }
+
+
+  .slider_section {
+    background-image: linear-gradient(to left, #FB6003, #F9B428, #FB6003) !important;
+  }
+
+  #slide_0 {
+    background-image: url(../images/0.jpg);
+  }
+
+  #slide_1 {
+    background-image: url(../images/1.jpg) !important;
+  }
+
+  #slide_2 {
+    background-image: url(../images/2.jpg) !important;
+  }
+
+  #slide_3 {
+    background-image: url(../images/3.jpg);
+  }
+
+  #slide_4 {
+    background-image: url(../images/4.jpg);
+  }
+
+  #slide_5 {
+    background-image: url(../images/5.jpg);
+  }
+
+  @media(max-width:700px) {
+    #slide_0 {
+      background-image: url(../images/mobile_0.jpg);
+    }
+
+    #slide_1 {
+      background-image: url(../images/mobile_1.jpg) !important;
+    }
+
+    #slide_2 {
+      background-image: url(../images/mobile_2.jpg) !important;
+    }
+
+    #slide_3 {
+      background-image: url(../images/mobile_3.jpg);
+    }
+
+    #slide_4 {
+      background-image: url(../images/mobile_4.jpg);
+    }
+
+    #slide_5 {
+      background-image: url(../images/mobile_5.jpg);
+    }
+
+    .slider-detail h2 {
+      margin-top: 24rem !important;
+      font-size: 1.6rem;
+    }
+
+    .slider-detail h1 {}
+
+    #mission {
+      flex-direction: column-reverse;
+    }
+
+    .slider_section .carousel-indicators li {
+      margin: 0 2px auto;
+
+    }
+
+    .slider_section .carousel-indicators li.active {
+      width: 18px;
+      height: 18px;
+      opacity: 1;
+      margin: 0 2px auto;
+    }
+  }
+  .inner_item{
+    overflow: hidden;
+    min-width: 300px;
+    height: 400px !important;
+  }
+  .inner_item img{
+    height: 370px;
+  }
+  @media(min-width:700px){
+    .container{
+      width: 95%;
+    }
+  }
