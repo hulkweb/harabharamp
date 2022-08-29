@@ -9,7 +9,7 @@ use Treinetic\ImageArtist\lib\Text\Font;
 use App\Models\Certificate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Storage;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary as FacadesCloudinary;
 
 class CertificateController extends Controller
@@ -78,14 +78,20 @@ class CertificateController extends Controller
         $textBox->setFont(Font::getFont(Font::$KHAND_BOLD));
         $textBox->setSize(40);
         $textBox->setMargin(2);
-         $textBox->setPadding(4);
+        $textBox->setPadding(4);
         $textBox->setText(ucfirst($user->name));
-        $img->setTextBox($textBox, 120, $img->getHeight() / 2 +10);
+        $img->setTextBox($textBox, 120, $img->getHeight() / 2 + 10);
 
-        $img->save(public_path() . "/uploads/certificates/people_certificate_$user->id.jpg", IMAGETYPE_JPEG);
-        return "https://mpbjym.chhavinirman.in/uploads/certificates/people_certificate_$user->id.jpg";
+        $img->save(public_path() . "/uploads/certificates/people_certificate_$user->phone-$user->id.jpg", IMAGETYPE_JPEG);
+
+
+
         // $uploadedFileUrl = FacadesCloudinary::upload(public_path() . "/uploads/certificates/people_certificate_$user->id.png", ['folder' => 'uploads'])->getSecurePath();
-
         // return $uploadedFileUrl;
+
+        // $path = Storage::put('/certificates/people_certificate_$user->phone-$user->id.jpg', file_get_contents(public_path() . "/uploads/certificates/people_certificate_$user->phone-$user->id.jpg"));
+        // $url = 'https://s3.' . env('AWS_DEFAULT_REGION') . '.amazonaws.com/' . env('AWS_BUCKET') . '/people_certificate_$user->phone-$user->id.jpg';
+
+        return "https://mpbjym.in/uploads/certificates/people_certificate_$user->phone-$user->id.jpg";
     }
 }
