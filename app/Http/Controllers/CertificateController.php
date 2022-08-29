@@ -86,6 +86,6 @@ class CertificateController extends Controller
         return "https://mpbjym.chhavinirman.in/uploads/certificates/people_certificate_$user->id.jpg";
         // $uploadedFileUrl = FacadesCloudinary::upload(public_path() . "/uploads/certificates/people_certificate_$user->id.png", ['folder' => 'uploads'])->getSecurePath();
 
-        return $uploadedFileUrl;
+        // return $uploadedFileUrl;
     }
 }
