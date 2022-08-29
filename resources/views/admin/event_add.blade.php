@@ -1,0 +1,85 @@
+@extends('layouts.admin')
+@section('content')
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Add Event</li>
+        </ol>
+        <form action="{{ route('event_store') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="box_general padding_bottom">
+                <div class="header_box version_2">
+                    <h2><i class="fa fa-file"></i>Basic info</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Event Title / शिर्शक</label>
+                            <input type="text" name="title" class="form-control" placeholder=" मन की बात ">
+                        </div>
+                    </div>
+                    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Upload Image / फोटो</label> <br>
+                            <input type="file" class="form-control" name="image">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>From Event Date / दिनांक </label>
+                            <input type="date" name="form_date" class="form-control" placeholder="Hotel Mariott">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> From Event Timing / समय</label> <br>
+                            <input type="time" class="form-control" name="from_time">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>To Event Date / दिनांक </label>
+                            <input type="date" name="to_date" class="form-control" placeholder="Hotel Mariott">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> To Event Timing / समय</label> <br>
+                            <input type="time" class="form-control" name="to_time">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Place / स्थान</label>
+                            <input type="text" name="place" class="form-control" placeholder="Hotel Mariott">
+                        </div>
+                    </div>
+                </div>
+                <!-- /row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Description / विवरण </label>
+                            <textarea name="details" id="" cols="30" rows="5" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /box_general-->
+            <!-- /box_general-->
+            <p><button name="save_event" type="submit" class="btn_1 medium">Save</button></p>
+        </form>
+    </div>
+    <!-- /.container-fluid-->
+@endsection
